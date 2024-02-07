@@ -2,6 +2,7 @@
 
 import Books from '@/components/books'
 import { Suspense, useState } from 'react'
+import Loading from '@/dashboard/loading'
 
 export default function Home() {
   const [value, setValue] = useState('')
@@ -24,7 +25,7 @@ export default function Home() {
         </div>
       </div>
       {keyword.length > 0 && (
-        <Suspense>
+        <Suspense fallback={<Loading />}>
           <Books value={keyword} />
         </Suspense>
       )}
