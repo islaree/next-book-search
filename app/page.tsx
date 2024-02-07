@@ -7,7 +7,7 @@ export default function Home() {
   const [value, setValue] = useState('')
   const [keyword, setKeyword] = useState(value)
 
-  async function handleClick() {
+  function handleClick() {
     setKeyword(value)
     setValue('')
   }
