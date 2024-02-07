@@ -20,6 +20,8 @@ export default async function Books({ value }: { value: string }) {
                   <img
                     className="w-full h-auto overflow-hidden rounded-lg border border-gray-300"
                     src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api`}
+                    width={80}
+                    height={112}
                   />
                 </div>
                 <div>
