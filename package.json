@@ -1,5 +1,5 @@
 {
-  "name": "nba-app",
+  "name": "google-books-api",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "html-react-parser": "^5.1.2",
     "next": "14.1.0",
     "react": "^18",
     "react-content-loader": "^6.2.1",
