@@ -1,5 +1,6 @@
 import { bookItems } from '@/types/book'
-import { getData } from './test'
+import { getData } from './getVolumes'
+import Link from 'next/link'
 
 export default async function Books({ value }: { value: string }) {
   const data = await getData(value)
@@ -15,21 +16,23 @@ export default async function Books({ value }: { value: string }) {
         {booksData != null ? (
           booksData.map((book: bookItems) => (
             <div key={book.id}>
-              <div className="flex gap-x-4 p-4 border-gray-200 border-b">
-                <div className="shrink-0 w-20">
-                  <img
-                    className="w-full h-auto overflow-hidden rounded-lg border border-gray-300"
-                    src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api`}
-                    width={80}
-                    height={112}
-                  />
+              <Link href={`books/${book.id}`}>
+                <div className="flex gap-x-4 p-4 border-gray-200 border-b">
+                  <div className="shrink-0 w-20">
+                    <img
+                      className="w-full h-auto overflow-hidden rounded-lg border border-gray-300"
+                      src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api`}
+                      width={80}
+                      height={112}
+                    />
+                  </div>
+                  <div>
+                    <div className="text-gray-400 text-xs">{book.volumeInfo.language}</div>
+                    <div className="text-sm font-bold">{book.volumeInfo.title}</div>
+                    <div className="mt-2 text-xs text-gray-400">{book.volumeInfo.subtitle}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-gray-400 text-xs">{book.volumeInfo.language}</div>
-                  <div className="text-sm font-bold">{book.volumeInfo.title}</div>
-                  <div className="mt-2 text-xs text-gray-400">{book.volumeInfo.subtitle}</div>
-                </div>
-              </div>
+              </Link>
               {/* <img src={book.volumeInfo.imageLinks.thumbnail} /> */}
             </div>
           ))
