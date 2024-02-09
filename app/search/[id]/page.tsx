@@ -1,10 +1,8 @@
 import Link from 'next/link'
-import parse from 'html-react-parser'
-import { IoArrowBack } from 'react-icons/io5'
-import { RiFolderAddFill } from 'react-icons/ri'
 import Book from '@/components/server/book'
+import { IoArrowBack } from 'react-icons/io5'
 
-export default function Library({ params }: { params: { id: string } }) {
+export default function SearchItemPage({ params }: { params: { id: string } }) {
   return (
     <div className="p-6">
       <Link href="/search" className="inline-flex items-center gap-x-1">
