@@ -1,20 +1,53 @@
 import Link from 'next/link'
 
-export default function RootPage() {
+export default function Home() {
   return (
     <>
-      <div className="flex justify-center items-center mt-8">
-        <img className="border border-gray-300 rounded-lg shadow-sm" src="demo.gif" />
-      </div>
-      <div className="mt-4 px-6 text-3xl text-gray-600">本を検索</div>
-      <div className="mt-4 px-6 text-lg text-gray-600">
-        Google Books APIを使用した本の検索機能の実装。
-        <br />
-      </div>
-      <div className="mt-6 px-6">
-        <Link href="/search" className="inline-flex px-5 py-2.5 text-md text-white font-semibold bg-emerald-500 rounded-full">
-          本の検索はこちら
-        </Link>
+      <div className="relative overflow-hidden z-10">
+        <img src="beams-home@95.jpg" className="absolute z-[-1] w-[80rem] max-w-none left-[-10rem] top-[-4rem]" />
+        <div className="pt-40 px-6">
+          <div className="font-extrabold text-4xl text-gray-900">本が見つかる</div>
+          <div className="text-lg text-gray-600 mt-4">
+            this app is easy to searching books
+            <br />
+          </div>
+        </div>
+        <div className="mt-8 px-6">
+          <Link href="/search" className="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-slate-900 text-white hover:bg-slate-700">
+            検索で本を探す
+          </Link>
+        </div>
+        <div className="flex flex-col gap-y-4 my-10">
+          <div className="flex gap-x-4 px-6">
+            <div className="shrink-0">
+              <img src="logo.svg" className="shadow-sm border border-gray-200 bg-gray-50 rounded w-10 p-2" />
+            </div>
+            <div className="">
+              <h2 className="text-sm font-semibold leading-6 text-slate-900">検索はとっても簡単</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-700">Each template is a well-structured Next.js project, giving you a codebase that’s productive and enjoyable to work in.</p>
+            </div>
+          </div>
+          <div className="flex gap-x-4 px-6">
+            <div className="shrink-0">
+              <img src="logo.svg" className="shadow-sm border border-gray-200 bg-gray-50 rounded w-10 p-2" />
+            </div>
+            <div className="">
+              <h2 className="text-sm font-semibold leading-6 text-slate-900">お気に入りを保存</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-700">Each template is a well-structured Next.js project, giving you a codebase that’s productive and enjoyable to work in.</p>
+            </div>
+          </div>
+          <div className="flex gap-x-4 px-6">
+            <div className="shrink-0">
+              <img src="logo.svg" className="shadow-sm border border-gray-200 bg-gray-50 rounded w-10 p-2" />
+            </div>
+            <div className="">
+              <h2 className="text-sm font-semibold leading-6 text-slate-900">Built with modern technologies</h2>
+              <p className="mt-2 text-sm leading-6 text-slate-700">Each template is a well-structured Next.js project, giving you a codebase that’s productive and enjoyable to work in.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-200 h-40 bg-gray-50"></div>
       </div>
     </>
   )
