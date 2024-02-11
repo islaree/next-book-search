@@ -22,8 +22,6 @@ export default function RootLayout({
     else setActive(true)
   }
 
-  const [user, setUser] = useState<any>()
-
   return (
     <html lang="en">
       <body className={`w-full ${active ? 'fixed' : ''} ${inter.className}`}>
@@ -34,5 +32,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-//className={inter.className}
