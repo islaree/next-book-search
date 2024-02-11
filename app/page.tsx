@@ -4,13 +4,14 @@ export default function Home() {
   return (
     <>
       <div className="relative overflow-hidden z-10">
-        <img src="beams-home@95.jpg" className="absolute z-[-1] w-[80rem] max-w-none left-[-10rem] top-[-4rem]" />
+        <img src="logo.svg" className="absolute z-[-1] w-[16rem] max-w-none left-[15rem] top-[-8rem]" />
         <div className="pt-40 px-6">
-          <div className="font-extrabold text-4xl text-gray-900">本が見つかる</div>
-          <p className="mt-4 text-base leading-7 text-slate-600">
-            Visually-stunning, easy to customize site templates built with React and Next.js. The perfect starting point for your next project and the ultimate resource for learning how experts build
-            real websites with Tailwind CSS.
-          </p>
+          <div className="font-medium text-md text-emerald-400">using Google Books API</div>
+          <div className="mt-4 font-extrabold text-4xl text-gray-900">本が見つかる</div>
+          <div className="text-lg text-gray-600 mt-4">
+            世界には本がたくさんあります。あなたが知っている本を検索して情報を確認することができます。
+            <br />
+          </div>
         </div>
         <div className="mt-8 px-6">
           <Link href="/search" className="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-slate-900 text-white hover:bg-slate-700">
