@@ -11,7 +11,7 @@ export default function Header({ isActive, onClick }: { isActive: boolean; onCli
       <div className="flex justify-between items-center px-6 h-16 border-b border-gray-200">
         <Link href="/" className="flex items-center gap-x-1">
           <Image src="/logo.svg" alt="logo" width={0} height={0} className="w-6 h-auto" />
-          <div className="text-lg font-medium text-[#1c2b33] leading-none">Books</div>
+          <div className="text-lg font-semibold text-[#1c2b33] leading-none">bookshelf</div>
         </Link>
         <div className="flex flex-col">
           <div onClick={onClick}>
