@@ -1,16 +1,13 @@
 'use client'
 
-import { SetStateAction, Suspense, useContext, useState } from 'react'
+import { SetStateAction, Suspense, useState } from 'react'
 import Search from '@/components/client/search'
 import Loading from '@/components/client/loading'
 import SearchingWord from '@/components/client/searching-word'
 import Books from '@/components/server/books'
-import { useDataContext } from '@/components/client/dataContext'
 
 export default function SearchPage() {
   const [value, setValue] = useState('')
-
-  const { data, setData } = useDataContext()
 
   const handleChange = (e: { target: { value: SetStateAction<string> } }) => {
     setValue(e.target.value)
@@ -18,7 +15,6 @@ export default function SearchPage() {
 
   return (
     <>
-      {data}
       <Search value={value} onChange={handleChange} />
       <SearchingWord keyword={value} />
       {value.length > 0 && (
