@@ -22,6 +22,7 @@ type bookVolumeInfo = {
   title: string
   subtitle: string
   authors: string[]
+  publisher: string
   publishedDate: string
   description: string
   industryIdentifiers: industryIdentifiersObject[]
@@ -42,10 +43,10 @@ type bookVolumeInfo = {
 }
 
 export type bookItems = {
-  kind: string // 'books#volume'
-  id: string //'X9CZDwAAQBAJ'
-  etag: string // '1JI2mzsyKAk'
-  selfLink: string // 'https://www.googleapis.com/books/v1/volumes/X9CZDwAAQBAJ'
+  kind: string
+  id: string
+  etag: string
+  selfLink: string
   volumeInfo: bookVolumeInfo
   saleInfo: any
   accessInfo: any
