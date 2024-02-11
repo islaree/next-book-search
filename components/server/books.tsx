@@ -19,26 +19,30 @@ export default async function Books({ keyword }: { keyword: string }) {
         booksData.map((book: bookItems) => (
           <div key={book.id}>
             <Link href={`search/${book.id}`}>
-              <div className="flex gap-x-4 p-4 border-gray-200 border-b bg-gray-50">
-                <div className="shrink-0 w-20">
+              <div className="flex gap-x-4 border-b border-gray-200 bg-gray-50 p-4">
+                <div className="w-20 shrink-0">
                   <img
-                    className="w-full h-auto overflow-hidden rounded-lg border border-gray-300"
+                    className="h-auto w-full overflow-hidden rounded-md border border-slate-200"
                     src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api`}
                     width={80}
                     height={112}
                   />
                 </div>
                 <div>
-                  <div className="text-gray-400 text-xs">{book.volumeInfo.language}</div>
                   <div className="mt-1 text-sm font-bold">{book.volumeInfo.title}</div>
-                  <div className="mt-2 text-xs text-gray-400">{book.volumeInfo.subtitle}</div>
+                  <div className="mt-2 text-xs text-gray-400">
+                    寄稿者 : {book.volumeInfo.authors}
+                  </div>
+                  <div className="mt-1 text-xs text-gray-400">
+                    出版社 : {book.volumeInfo.publisher}
+                  </div>
                 </div>
               </div>
             </Link>
           </div>
         ))
       ) : (
-        <div className="flex pt-40 px-6 justify-center items-center font-bold text-md text-gray-400 text-center">
+        <div className="text-md flex items-center justify-center px-6 pt-40 text-center font-bold text-gray-400">
           キーワードに一致する本が
           <br />
           見つかりませんでした
