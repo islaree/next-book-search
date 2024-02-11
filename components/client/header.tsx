@@ -11,7 +11,7 @@ export default function Header({ isActive, onClick }: { isActive: boolean; onCli
       <div className="flex justify-between items-center px-6 h-16 border-b border-gray-200">
         <Link href="/" className="flex items-center gap-x-1">
           <Image src="/logo.svg" alt="logo" width={0} height={0} className="w-6 h-auto" />
-          <div className="text-lg font-semibold text-[#1c2b33] leading-none">bookshelf</div>
+          <div className="text-md font-bold text-[#1c2b33] leading-none">bookmark</div>
         </Link>
         <div className="flex flex-col">
           <div onClick={onClick}>
@@ -25,6 +25,9 @@ export default function Header({ isActive, onClick }: { isActive: boolean; onCli
         </div>
         <div onClick={onClick}>
           <Link href="/search">検索</Link>
+        </div>
+        <div onClick={onClick}>
+          <Link href="/my-library">マイライブラリ</Link>
         </div>
       </div>
     </header>
