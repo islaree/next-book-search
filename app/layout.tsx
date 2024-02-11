@@ -5,7 +5,7 @@ import './globals.css'
 
 import Header from '@/components/client/header'
 import Footer from '@/components/client/footer'
-// import { metadata } from '@/components/server/meta'
+import { DataProvider } from '@/components/client/dataContext'
 
 import { useState } from 'react'
 
@@ -22,13 +22,17 @@ export default function RootLayout({
     else setActive(true)
   }
 
+  const [user, setUser] = useState<any>()
+
   return (
     <html lang="en">
       <body className={`w-full ${active ? 'fixed' : ''} ${inter.className}`}>
         <Header isActive={active} onClick={handleClick} />
-        {children}
+        <DataProvider>{children}</DataProvider>
         <Footer />
       </body>
     </html>
   )
 }
+
+//className={inter.className}
