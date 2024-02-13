@@ -9,7 +9,7 @@ import { RxCross2 } from 'react-icons/rx'
 export default function Header({ isActive, onClick }: { isActive: boolean; onClick: MouseEventHandler<HTMLDivElement> }) {
   return (
     <>
-      <header className={`transition-all duration-500 ${isActive ? 'blur-sm' : ''}`}>
+      <header>
         <div className="flex h-16 items-center justify-between pl-6">
           <Link href="/" className="flex items-center gap-x-1">
             <Image src="/logo.svg" alt="logo" width={0} height={0} className="h-auto w-6" />
@@ -22,8 +22,9 @@ export default function Header({ isActive, onClick }: { isActive: boolean; onCli
           </div>
         </div>
       </header>
+      {isActive && <div className="fixed left-0 top-0 z-40 h-screen w-full bg-black/50"></div>}
       <div
-        className={`fixed right-0 top-0 z-20 h-[100vh] w-3/4 border-l border-gray-200 bg-white shadow-md transition-all duration-500 ${isActive ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed right-0 top-0 z-50 h-[100vh] w-3/4 border-l border-gray-200 bg-white shadow-md transition-all duration-500 ${isActive ? 'translate-x-0' : 'translate-x-full'}`}
       >
         <div className="flex h-16 w-full items-center justify-between border-b border-gray-200">
           <div onClick={onClick}>
