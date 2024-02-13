@@ -1,6 +1,6 @@
 'use client'
 
-import { useDataContext } from './dataContext'
+import { useDataContext } from '../dataContext'
 import { IconContext } from 'react-icons'
 import { PiHeartBold } from 'react-icons/pi'
 import { AiFillHeart } from 'react-icons/ai'
