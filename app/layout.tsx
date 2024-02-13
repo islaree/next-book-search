@@ -26,10 +26,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`w-full ${active ? 'fixed' : ''} ${inter.className}`}>
         <Header isActive={active} onClick={handleClick} />
-        <div className={`transition-all duration-500 ${active ? 'blur' : ''}`}>
-          <DataProvider>{children}</DataProvider>
-          <Footer />
-        </div>
+        <DataProvider>{children}</DataProvider>
+        <Footer />
       </body>
     </html>
   )
