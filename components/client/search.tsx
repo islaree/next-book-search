@@ -12,6 +12,7 @@ export default function Search({ value, onChange }: { value: string; onChange: C
             placeholder="本を検索する"
             value={value}
             onChange={onChange}
+            type="search"
           />
           <div className="absolute left-4 top-1/2 translate-y-[-50%]">
             <IconContext.Provider value={{ color: '#9ca3af' }}>
