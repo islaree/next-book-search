@@ -3,9 +3,9 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-import Header from '@/components/client/header'
-import Footer from '@/components/client/footer'
-import { DataProvider } from '@/components/client/dataContext'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
+import { DataProvider } from '@/components/dataContext'
 
 import { useState } from 'react'
 
@@ -26,8 +26,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`w-full ${active ? 'fixed' : ''} ${inter.className}`}>
         <Header isActive={active} onClick={handleClick} />
-        <DataProvider>{children}</DataProvider>
-        <Footer />
+        <div className={`transition-all duration-500 ${active ? 'blur' : ''}`}>
+          <DataProvider>{children}</DataProvider>
+          <Footer />
+        </div>
       </body>
     </html>
   )
