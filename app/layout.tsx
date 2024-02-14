@@ -6,7 +6,6 @@ import './globals.css'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { DataProvider } from '@/components/dataContext'
-
 import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`w-full ${active ? 'fixed' : ''} ${inter.className}`}>
+      <body className={`mx-auto w-full max-w-2xl ${active ? 'fixed' : ''} ${inter.className}`}>
         <Header isActive={active} onClick={handleClick} />
         <DataProvider>{children}</DataProvider>
         <Footer />
