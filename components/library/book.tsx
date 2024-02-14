@@ -13,11 +13,11 @@ export default async function Book({ id }: { id: string }) {
 
   return (
     <Link href={`/search/${id}`}>
-      <div className="flex gap-x-2">
+      <div className="flex gap-x-4">
         <div className="shrink-0">
           {data.volumeInfo.hasOwnProperty('imageLinks') ? (
             <Image
-              className="h-auto w-full rounded border border-slate-200"
+              className="h-auto w-16 rounded border border-slate-200"
               src={data.volumeInfo.imageLinks.thumbnail}
               width={80}
               height={112}
