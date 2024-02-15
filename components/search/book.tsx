@@ -59,7 +59,7 @@ export default async function Book({ id }: { id: string }) {
 
         {data.hasOwnProperty('volumeInfo') && data.volumeInfo.hasOwnProperty('description') && (
           <div className="my-8 border-t border-slate-200">
-            <div className="mt-8 text-sm text-slate-600">{parse(data.volumeInfo.description)}</div>
+            <div className="mt-8 text-sm leading-normal text-slate-600">{parse(data.volumeInfo.description)}</div>
           </div>
         )}
       </div>

@@ -23,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`mx-auto w-full max-w-2xl ${active ? 'fixed' : ''} ${inter.className}`}>
+      <body className={`mx-auto w-full max-w-2xl ${active ? 'overflow-hidden' : ''} ${inter.className}`}>
         <Header isActive={active} onClick={handleClick} />
         <DataProvider>{children}</DataProvider>
         <Footer />
