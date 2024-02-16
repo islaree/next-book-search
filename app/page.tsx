@@ -31,9 +31,7 @@ export default function RootPage() {
             </div>
             <div className="">
               <h2 className="text-sm font-semibold leading-6 text-slate-900">検索はとっても簡単</h2>
-              <p className="mt-2 text-sm leading-6 text-slate-700">
-                検索したい本のタイトルや寄稿者など、その本に関する様々なキーワードから本を検索します。文字を入力した途端に検索が始まります。
-              </p>
+              <p className="mt-2 text-sm leading-6 text-slate-700">検索したい本のタイトルや寄稿者など、その本に関する様々なキーワードから本を検索します。</p>
             </div>
           </div>
           <div className="flex gap-x-4 px-6">
@@ -43,7 +41,7 @@ export default function RootPage() {
             <div className="">
               <h2 className="text-sm font-semibold leading-6 text-slate-900">お気に入りを保存</h2>
               <p className="mt-2 text-sm leading-6 text-slate-700">
-                Each template is a well-structured Next.js project, giving you a codebase that’s productive and enjoyable to work in.
+                お気に入りの本が見つかったとき、マイライブラリに追加してみましょう。お気に入りの本だけを集めたあなただけのライブラリが作成できます。
               </p>
             </div>
           </div>

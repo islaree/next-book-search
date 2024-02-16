@@ -35,7 +35,15 @@ export default async function Book({ id }: { id: string }) {
         <div className="mt-8 text-xl font-bold text-slate-900">{data.volumeInfo.title}</div>
         {data.volumeInfo.hasOwnProperty('subtitle') && <div className="mt-1 text-sm text-gray-500">{data.volumeInfo.subtitle}</div>}
         <div className="mt-2">
-          <LikeButton id={id} />
+          <LikeButton
+            book={{
+              id: id,
+              title: data.volumeInfo.title,
+              thumbnail: data.volumeInfo.imageLinks.thumbnail,
+              authors: data.volumeInfo.authors,
+              publisher: data.volumeInfo.publisher,
+            }}
+          />
         </div>
 
         <ul className="mt-4 flex flex-col gap-y-1">
@@ -59,7 +67,7 @@ export default async function Book({ id }: { id: string }) {
 
         {data.hasOwnProperty('volumeInfo') && data.volumeInfo.hasOwnProperty('description') && (
           <div className="my-8 border-t border-slate-200">
-            <div className="mt-8 text-sm leading-normal text-slate-600">{parse(data.volumeInfo.description)}</div>
+            <div className="mt-8 text-sm leading-6 text-slate-600">{parse(data.volumeInfo.description)}</div>
           </div>
         )}
       </div>
