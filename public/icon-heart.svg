@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140.529" height="128.307" viewBox="0 0 140.529 128.307">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="パス_1" data-name="パス 1" d="M70.264,108.768c32.92-23.894,45.9-42.928,50.951-55.043,3.12-7.491,5.616-18.254-.207-26.988C116.659,20.215,108.271,16,99.64,16c-4.02,0-11.574.989-17,7.61L70.264,38.692,57.893,23.61c-5.431-6.621-12.985-7.61-17-7.61-8.63,0-17.018,4.215-21.367,10.738-5.824,8.734-3.328,19.5-.209,26.985C24.36,65.84,37.344,84.874,70.264,108.768m0,19.538c-37.781-25.619-57.6-48.925-65.721-68.43C-17.227,7.6,44.954-17.4,70.264,13.463,95.575-17.4,157.755,7.6,135.986,59.876,127.859,79.382,108.045,102.688,70.264,128.307Z" transform="translate(117.236 349)" fill="#00f200"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.103" x2="0.97" y2="0.977" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#06b876"/>
+      <stop offset="1" stop-color="#0fd46c"/>
+    </linearGradient>
+  </defs>
+  <g id="マスクグループ_1" data-name="マスクグループ 1" transform="translate(-117.236 -349)" clip-path="url(#clip-path)">
+    <rect id="長方形_6" data-name="長方形 6" width="172" height="152" transform="translate(101 336)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
