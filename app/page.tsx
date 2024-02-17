@@ -36,7 +36,7 @@ export default function RootPage() {
           </div>
           <div className="flex gap-x-4 px-6">
             <div className="shrink-0">
-              <img src="/logo.svg" className="w-10 rounded border border-gray-200 bg-gray-50 p-2.5 shadow-sm" />
+              <img src="/icon-heart.svg" className="w-10 rounded border border-gray-200 bg-gray-50 p-2.5 shadow-sm" />
             </div>
             <div className="">
               <h2 className="text-sm font-semibold leading-6 text-slate-900">お気に入りを保存</h2>
