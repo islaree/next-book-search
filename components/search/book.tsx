@@ -17,13 +17,15 @@ export default async function Book({ id }: { id: string }) {
     <>
       <div className="relative overflow-hidden border-b border-gray-200">
         <div className="flex h-56 w-full items-center justify-center overflow-hidden bg-gray-300 opacity-60">
-          {data.volumeInfo.hasOwnProperty('imageLinks') && <img className="w-full scale-150 blur" src={data.volumeInfo.imageLinks.thumbnail} alt="a" />}
+          {data.volumeInfo.hasOwnProperty('imageLinks') && (
+            <img className="w-full scale-150 blur" src={data.volumeInfo.imageLinks.thumbnail.replace('http', 'https')} alt="a" />
+          )}
         </div>
         <div className="absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
           {data.hasOwnProperty('volumeInfo') && data.volumeInfo.hasOwnProperty('imageLinks') && (
             <Image
               className="h-auto w-28 rounded-lg border border-gray-200"
-              src={data.volumeInfo.imageLinks.thumbnail}
+              src={data.volumeInfo.imageLinks.thumbnail.replace('http', 'https')}
               width={128}
               height={168}
               alt="thumbnail"

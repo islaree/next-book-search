@@ -1,6 +1,7 @@
 import { cache } from 'react'
 import Link from 'next/link'
 import { bookItems } from '@/types/book'
+import Image from 'next/image'
 
 const getData = cache(async (keyword: string) => {
   const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${keyword}`)
@@ -21,12 +22,21 @@ export default async function Books({ keyword }: { keyword: string }) {
             <Link href={`search/${book.id}`} scroll={true}>
               <div className="flex gap-x-4 border-b border-gray-200 bg-gray-50 p-4">
                 <div className="w-20 shrink-0">
-                  <img
+                  {book.volumeInfo.hasOwnProperty('imageLinks') && (
+                    <Image
+                      className="h-auto w-28 rounded-lg border border-gray-200"
+                      src={book.volumeInfo.imageLinks.thumbnail.replace('http', 'https')}
+                      width={128}
+                      height={168}
+                      alt="thumbnail"
+                    />
+                  )}
+                  {/* <img
                     className="h-auto w-full overflow-hidden rounded-md border border-slate-200"
-                    src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api`}
+                    src={`https://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api`}
                     width={80}
                     height={112}
-                  />
+                  /> */}
                 </div>
                 <div>
                   <div className="mt-1 text-sm font-bold">{book.volumeInfo.title}</div>
