@@ -20,7 +20,9 @@ export default function LibraryPage() {
                     {book.thumbnail ? (
                       <Image className="h-auto w-16 rounded border border-slate-200" src={book.thumbnail} width={80} height={112} alt={book.title} />
                     ) : (
-                      <div>not image</div>
+                      <div className="flex h-[90px] w-16 items-center justify-center rounded border border-slate-200 bg-slate-50 text-xs text-slate-400">
+                        not image
+                      </div>
                     )}
                   </div>
                   <div>
