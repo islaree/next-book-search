@@ -8,9 +8,9 @@ import { AiFillHeart } from 'react-icons/ai'
 interface LikeButtonProps {
   id: string
   title: string
-  thumbnail: string
-  authors: string
-  publisher: string
+  thumbnail: string | null
+  authors: string | undefined
+  publisher: string | undefined
 }
 
 export default function LikeButton({ book }: { book: LikeButtonProps }) {
