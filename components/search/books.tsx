@@ -30,8 +30,8 @@ export default async function Books({ keyword }: { keyword: string }) {
                 </div>
                 <div>
                   <div className="mt-1 text-sm font-bold">{book.volumeInfo.title}</div>
-                  <div className="mt-2 text-xs text-gray-400">寄稿者 : {book.volumeInfo.authors}</div>
-                  <div className="mt-1 text-xs text-gray-400">出版社 : {book.volumeInfo.publisher}</div>
+                  {book.volumeInfo.hasOwnProperty('authors') && <div className="mt-2 text-xs text-gray-400">寄稿者: {book.volumeInfo.authors.join(', ')}</div>}
+                  {book.volumeInfo.hasOwnProperty('publisher') && <div className="mt-1 text-xs text-gray-400">出版社: {book.volumeInfo.publisher}</div>}
                 </div>
               </div>
             </Link>

@@ -17,7 +17,7 @@ export default async function Book({ id }: { id: string }) {
     <>
       <div className="relative overflow-hidden border-b border-gray-200">
         <div className="flex h-56 w-full items-center justify-center overflow-hidden bg-gray-300 opacity-60">
-          <img className="w-full scale-150 blur" src={data.volumeInfo.imageLinks.thumbnail} alt="a" />
+          {data.volumeInfo.hasOwnProperty('imageLinks') && <img className="w-full scale-150 blur" src={data.volumeInfo.imageLinks.thumbnail} alt="a" />}
         </div>
         <div className="absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
           {data.hasOwnProperty('volumeInfo') && data.volumeInfo.hasOwnProperty('imageLinks') && (
@@ -39,15 +39,15 @@ export default async function Book({ id }: { id: string }) {
             book={{
               id: id,
               title: data.volumeInfo.title,
-              thumbnail: data.volumeInfo.imageLinks.thumbnail,
-              authors: data.volumeInfo.authors,
-              publisher: data.volumeInfo.publisher,
+              thumbnail: data.volumeInfo.imageLinks ? data.volumeInfo.imageLinks.thumbnail : null,
+              authors: data.volumeInfo.authors ? data.volumeInfo.authors : null,
+              publisher: data.volumeInfo.publisher ? data.volumeInfo.publisher : null,
             }}
           />
         </div>
 
         <ul className="mt-4 flex flex-col gap-y-1">
-          {data.volumeInfo.hasOwnProperty('publishedDate') && <li className="text-sm text-gray-500">ページ数 : {data.volumeInfo.pageCount}</li>}
+          {data.volumeInfo.hasOwnProperty('pageCount') && <li className="text-sm text-gray-500">ページ数 : {data.volumeInfo.pageCount}</li>}
           {data.volumeInfo.hasOwnProperty('publishedDate') && <li className="text-sm text-gray-500">公開日 : {data.volumeInfo.publishedDate}</li>}
           {data.volumeInfo.hasOwnProperty('publisher') && <li className="text-sm text-gray-500">出版社 : {data.volumeInfo.publisher}</li>}
           {data.volumeInfo.hasOwnProperty('authors') && <li className="text-sm text-gray-500">寄稿者 : {data.volumeInfo.authors}</li>}
