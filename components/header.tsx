@@ -12,7 +12,7 @@ export default function Header({ isActive, onClick }: { isActive: boolean; onCli
       <header className="sticky top-0 z-30 bg-white">
         <div className="flex h-16 items-center justify-between pl-6">
           <Link href="/" className="flex items-center gap-x-1">
-            <Image src="/logo.svg" alt="logo" width={0} height={0} className="h-auto w-6" />
+            <Image src="/logo.svg" alt="logo" width={0} height={0} className="h-auto w-6" priority={true} />
             <div className="text-md font-bold leading-none text-[#1c2b33]">bookmark</div>
           </Link>
           <div className="flex flex-col items-center justify-center">
