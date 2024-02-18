@@ -1,8 +1,8 @@
 'use client'
 
 import { SetStateAction, Suspense, useState } from 'react'
+import Loading from '@/components/search/loading'
 import Search from '@/components/search/search'
-import Loading from '@/components/loading'
 import Books from '@/components/search/books'
 
 export default function SearchPage() {

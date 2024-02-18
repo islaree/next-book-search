@@ -1,6 +1,6 @@
 import { cache } from 'react'
 import parse from 'html-react-parser'
-import LikeButton from '@/components/like-button'
+import LikeButton from '@/components/search/like-button'
 import Image from 'next/image'
 
 const getData = cache(async (bookId: string) => {
@@ -33,7 +33,7 @@ export default async function Book({ id }: { id: string }) {
           )}
         </div>
       </div>
-      <div className="px-4">
+      <div className="px-6">
         <div className="mt-8 text-xl font-bold text-slate-900">{data.volumeInfo.title}</div>
         {data.volumeInfo.hasOwnProperty('subtitle') && <div className="mt-1 text-sm text-gray-500">{data.volumeInfo.subtitle}</div>}
         <div className="mt-2">

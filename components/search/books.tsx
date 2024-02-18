@@ -9,20 +9,20 @@ const getData = cache(async (keyword: string) => {
   return data
 })
 
-export default async function Books({ keyword }: { keyword: string }) {
-  let data = await getData(keyword)
+export default async function SearchResultsList({ keyword }: { keyword: string }) {
+  const data = await getData(keyword)
   let booksData = null
-  if (data != null) booksData = data.items
+  if (data) booksData = data.items
 
   return (
     <div className="flex flex-col">
-      {booksData != null ? (
+      {booksData ? (
         booksData.map((book: bookItems) => (
           <div key={book.id}>
             <Link href={`search/${book.id}`} scroll={true}>
-              <div className="flex gap-x-4 border-b border-gray-200 bg-gray-50 p-4">
+              <div className="flex gap-x-4 border-b border-gray-200 px-6 py-4">
                 <div className="w-20 shrink-0">
-                  {book.volumeInfo.hasOwnProperty('imageLinks') && (
+                  {book.volumeInfo.imageLinks ? (
                     <Image
                       className="h-auto w-28 rounded-lg border border-gray-200"
                       src={book.volumeInfo.imageLinks.thumbnail.replace('http', 'https')}
@@ -30,18 +30,14 @@ export default async function Books({ keyword }: { keyword: string }) {
                       height={168}
                       alt="thumbnail"
                     />
+                  ) : (
+                    <div className="flex h-[104px] w-20 items-center justify-center rounded bg-gray-200 text-xs font-bold italic text-gray-400">no image</div>
                   )}
-                  {/* <img
-                    className="h-auto w-full overflow-hidden rounded-md border border-slate-200"
-                    src={`https://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api`}
-                    width={80}
-                    height={112}
-                  /> */}
                 </div>
                 <div>
                   <div className="mt-1 text-sm font-bold">{book.volumeInfo.title}</div>
-                  {book.volumeInfo.hasOwnProperty('authors') && <div className="mt-2 text-xs text-gray-400">寄稿者: {book.volumeInfo.authors.join(', ')}</div>}
-                  {book.volumeInfo.hasOwnProperty('publisher') && <div className="mt-1 text-xs text-gray-400">出版社: {book.volumeInfo.publisher}</div>}
+                  {book.volumeInfo.authors && <div className="mt-2 text-xs text-gray-400">寄稿者: {book.volumeInfo.authors.join(', ')}</div>}
+                  {book.volumeInfo.publisher && <div className="mt-1 text-xs text-gray-400">出版社: {book.volumeInfo.publisher}</div>}
                 </div>
               </div>
             </Link>
