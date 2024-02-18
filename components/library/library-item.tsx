@@ -11,7 +11,7 @@ type LibraryItemProps = {
 
 export default function LibraryItem({ book }: { book: LibraryItemProps }) {
   return (
-    <Link href={`/search/${book.id}`}>
+    <Link href={`/search/${book.id}`} className="block h-full px-6 py-4 hover:bg-gray-50 hover:ring-1 hover:ring-gray-200">
       <div className="flex gap-x-4">
         <div className="shrink-0">
           {book.thumbnail ? (

@@ -12,9 +12,9 @@ export default function LibraryList({ data }: { data: LibraryListProps[] }) {
   return (
     <>
       {data.length > 0 ? (
-        <ul className="mt-6 flex flex-col">
+        <ul className="g:col-auto mt-6 flex flex-col lg:grid lg:grid-cols-2">
           {data.map((book: any) => (
-            <li key={book.id} className="px-6 py-4">
+            <li key={book.id}>
               <LibraryItem book={book} />
             </li>
           ))}

@@ -9,8 +9,8 @@ interface LikeButtonProps {
   id: string
   title: string
   thumbnail: string | null
-  authors: string | undefined
-  publisher: string | undefined
+  authors: string[] | null
+  publisher: string | null
 }
 
 export default function LikeButton({ book }: { book: LikeButtonProps }) {

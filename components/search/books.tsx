@@ -15,12 +15,12 @@ export default async function SearchResultsList({ keyword }: { keyword: string }
   if (data) booksData = data.items
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col lg:col-auto lg:grid lg:grid-cols-2">
       {booksData ? (
         booksData.map((book: bookItems) => (
           <div key={book.id}>
-            <Link href={`search/${book.id}`} scroll={true}>
-              <div className="flex gap-x-4 border-b border-gray-200 px-6 py-4">
+            <Link href={`search/${book.id}`} scroll={true} className="block h-full hover:bg-gray-50 hover:ring-1 hover:ring-gray-200">
+              <div className="flex gap-x-4 px-6 py-4">
                 <div className="w-20 shrink-0">
                   {book.volumeInfo.imageLinks ? (
                     <Image
