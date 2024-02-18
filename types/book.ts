@@ -21,8 +21,8 @@ type imageLinksObject = {
 type bookVolumeInfo = {
   title: string
   subtitle: string
-  authors: string[]
-  publisher: string
+  authors?: string[]
+  publisher?: string
   publishedDate: string
   description: string
   industryIdentifiers: industryIdentifiersObject[]
@@ -35,7 +35,7 @@ type bookVolumeInfo = {
   allowAnonLogging: boolean
   contentVersion: string
   panelizationSummary: panelizationSummaryObject
-  imageLinks: imageLinksObject
+  imageLinks?: imageLinksObject
   language: string
   previewLink: string
   infoLink: string
