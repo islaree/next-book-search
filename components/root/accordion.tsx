@@ -10,7 +10,8 @@ export default function Accordion() {
     <div className="flex max-h-[400px] overflow-hidden rounded-lg bg-gray-50 p-6">
       <div className="w-1/2">
         <Panel title="本の検索" isActive={activeIndex === 0} onShow={() => setActiveIndex(0)}>
-          With a population of about 2 million, Almaty is Kazakhstan's largest city. From 1929 to 1997, it was its capital city.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quibusdam ullam molestiae hic est dignissimos sunt explicabo asperiores, recusandae
+          inventore saepe quaerat id vero commodi enim porro a! Reiciendis, commodi?
         </Panel>
         <Panel title="マイライブラリ" isActive={activeIndex === 1} onShow={() => setActiveIndex(1)}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ab. Alias veritatis molestias laboriosam placeat adipisci in, fuga repellendus,
