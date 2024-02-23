@@ -11,7 +11,7 @@ export default function Accordion() {
       <div className="w-1/2">
         <Panel title="本の検索" isActive={activeIndex === 0} onShow={() => setActiveIndex(0)}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quibusdam ullam molestiae hic est dignissimos sunt explicabo asperiores, recusandae
-          inventore saepe quaerat id vero commodi enim porro a! Reiciendis, commodi?
+          inventore saepe quaerat id vero commodi enim porro a! Reiciendis, commodi.
         </Panel>
         <Panel title="マイライブラリ" isActive={activeIndex === 1} onShow={() => setActiveIndex(1)}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ab. Alias veritatis molestias laboriosam placeat adipisci in, fuga repellendus,
