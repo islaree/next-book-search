@@ -1,6 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Metadata } from 'next'
+import Carousel from '@/components/root/carousel'
+import SectionTitle from '@/components/root/section-title'
+import { Section } from '@/components/root/section'
+import Accordion from '@/components/root/accordion'
+import SlideToLeft from '@/components/root/book-slider'
+import { SlideToRight } from '@/components/root/book-slider'
 
 export const metadata: Metadata = {
   title: 'Books - Home',
@@ -10,46 +16,72 @@ export const metadata: Metadata = {
 export default function RootPage() {
   return (
     <>
-      <div className="relative z-10 overflow-hidden">
-        <Image src="/logo.svg" className="absolute left-[15rem] top-[-8rem] z-[-1] w-[16rem] max-w-none" alt="design" width={0} height={0} priority={true} />
-        <div className="px-6 pt-40">
-          <div className="mt-4 text-4xl font-extrabold text-gray-900">本が見つかる</div>
-          <div className="mt-4 text-lg text-gray-600">
-            世界には本がたくさんあります。あなたが知っている本を検索して情報を確認することができます。
-            <br />
+      <Section>
+        <div className="my-10">
+          <h1 className="text-center text-[24px] font-semibold">Book Search App</h1>
+          <h2 className="text-center text-[52px] font-bold">どんな本も見つける</h2>
+          <p className="text-center text-[18px] text-gray-600">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, repellendus sit! Reprehenderit, et nam necessitatibus fugiat nulla a quae
+            deserunt. Porro, aliquam cupiditate! Non tenetur asperiores laboriosam inventore numquam tempora.
+          </p>
+        </div>
+        <div className="flex flex-col gap-y-4">
+          <SlideToLeft />
+          <SlideToRight />
+        </div>
+      </Section>
+      <Section>
+        <SectionTitle title="ちょっとした機能" />
+        <Accordion />
+      </Section>
+      <Section>
+        <SectionTitle title="たくさんの本を見つけます。" />
+        <div className="flex items-center justify-center lg:h-[600px]">
+          <div className="relative">
+            <img src="/macpro.jpg" />
+            <img src="/book-sample.png" className="absolute right-0 top-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
+            <img src="/book-sample.png" className="absolute right-0 top-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
+            <img src="/book-sample.png" className="absolute right-0 top-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
+            <img src="/book-sample.png" className="absolute right-0 top-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
+            <img src="/book-sample.png" className="absolute left-64 top-20 w-40 overflow-hidden rounded-lg border border-gray-100" />
+            <img src="/book-sample.png" className="absolute left-[10rem] top-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
+            <img src="/book-sample.png" className="absolute bottom-10 left-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
+            <img src="/book-sample.png" className="absolute bottom-2 left-40 w-40 overflow-hidden rounded-lg border border-gray-100" />
           </div>
         </div>
-        <div className="mt-8 px-6">
-          <Link href="/search" className="inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700">
-            検索で本を探す
-          </Link>
-        </div>
-        <div className="my-16 flex flex-col gap-y-4">
-          <div className="flex gap-x-4 px-6">
-            <div className="shrink-0">
-              <img src="/search.svg" className="w-10 rounded border border-gray-200 bg-gray-50 p-2.5 shadow-sm" />
-            </div>
-            <div className="">
-              <h2 className="text-sm font-semibold leading-6 text-slate-900">検索はとっても簡単</h2>
-              <p className="mt-2 text-sm leading-6 text-slate-700">検索したい本のタイトルや寄稿者など、その本に関する様々なキーワードから本を検索します。</p>
-            </div>
+      </Section>
+      <Section backgroundColor="bg-[#fafafa]">
+        <SectionTitle title="使用技術を紹介します。" />
+        <Carousel />
+      </Section>
+      <Section>
+        <div className="mx-auto flex max-w-2xl gap-x-6">
+          <div className="w-1/2 rounded-lg bg-gray-100 px-6 py-8">
+            <Router title="GitHub" url="https://github.com/daxchx/book-search-app">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, maxime ipsum! Natus corrupti temporibus facilis at, odit voluptatibus officiis
+              numquam. Porro, ab odio! Alias blanditiis ipsum, sed non voluptate vero.
+            </Router>
           </div>
-          <div className="flex gap-x-4 px-6">
-            <div className="shrink-0">
-              <img src="/icon-heart.svg" className="w-10 rounded border border-gray-200 bg-gray-50 p-2.5 shadow-sm" />
-            </div>
-            <div className="">
-              <h2 className="text-sm font-semibold leading-6 text-slate-900">お気に入りを保存</h2>
-              <p className="mt-2 text-sm leading-6 text-slate-700">
-                お気に入りの本が見つかったとき、マイライブラリに追加してみましょう。お気に入りの本だけを集めたあなただけのライブラリが作成できます。
-              </p>
-            </div>
+          <div className="w-1/2 rounded-lg bg-gray-100 p-6">
+            <Router title="Google Books API" url="https://developers.google.com/books?hl=ja">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, maxime ipsum! Natus corrupti temporibus facilis at, odit voluptatibus officiis
+              numquam. Porro, ab odio! Alias blanditiis ipsum, sed non voluptate vero.
+            </Router>
           </div>
         </div>
-        <div className="h-40 border-t border-gray-200 bg-gray-50">
-          <div>本を検索する</div>
-        </div>
-      </div>
+      </Section>
+    </>
+  )
+}
+
+function Router({ title, children, url }: { title: string; children: string; url: string }) {
+  return (
+    <>
+      <h3 className="mb-4 text-[24px] font-semibold text-[#1d1d1f]">{title}</h3>
+      <p className="text-[#1d1d1f]">{children}</p>
+      <Link href={url} target="_blank" className="rounded bg-emerald-500 px-2 py-1 text-white">
+        {title}へ
+      </Link>
     </>
   )
 }

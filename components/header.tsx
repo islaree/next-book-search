@@ -9,13 +9,12 @@ import { RxCross2 } from 'react-icons/rx'
 export default function Header({ isActive, onClick }: { isActive: boolean; onClick: MouseEventHandler<HTMLDivElement> }) {
   return (
     <>
-      <header className="sticky top-0 z-30 bg-white">
-        <div className="flex h-16 items-center justify-between pl-6 lg:pr-6">
-          <Link href="/" className="flex items-center gap-x-1">
+      <header className="sticky top-0 z-30 flex w-full justify-center bg-white px-6">
+        <div className="flex h-16 w-full max-w-[1400px] items-center justify-between lg:justify-start lg:gap-x-10">
+          <Link href="/">
             <Image src="/logo.svg" alt="logo" width={0} height={0} className="h-auto w-6" priority={true} />
-            <div className="text-md font-bold leading-none text-[#1c2b33]">bookmark</div>
           </Link>
-          <div className="flex flex-col items-center justify-center lg:hidden">
+          <div className="mr-[-24px] flex flex-col items-center justify-center lg:hidden">
             <div onClick={onClick} className="flex h-16 w-16 items-center justify-center">
               <RiMenuFill className="h-6 w-6" />
             </div>
