@@ -1,12 +1,7 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import type { Metadata } from 'next'
-import Carousel from '@/components/root/carousel'
-import SectionTitle from '@/components/root/section-title'
-import { Section } from '@/components/root/section'
-import Accordion from '@/components/root/accordion'
-import SlideToLeft from '@/components/root/book-slider'
-import { SlideToRight } from '@/components/root/book-slider'
+import SliderGroup from '@/components/root/book-slider'
+import SearchDemo from '@/components/root/search-demo'
 
 export const metadata: Metadata = {
   title: 'Books - Home',
@@ -16,72 +11,131 @@ export const metadata: Metadata = {
 export default function RootPage() {
   return (
     <>
-      <Section>
-        <div className="my-10">
-          <h1 className="text-center text-[24px] font-semibold">Book Search App</h1>
-          <h2 className="text-center text-[52px] font-bold">どんな本も見つける</h2>
-          <p className="text-center text-[18px] text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, repellendus sit! Reprehenderit, et nam necessitatibus fugiat nulla a quae
-            deserunt. Porro, aliquam cupiditate! Non tenetur asperiores laboriosam inventore numquam tempora.
+      <div className="lg:mt-20 lg:px-14">
+        <h1 className="p-6 text-center text-[60px] font-extrabold text-[#171717]">Book Search App using Google Books API</h1>
+        <p className="px-8 py-10 text-center text-[18px] leading-[1.8] text-[#666]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+          <br /> repellendus sit! Reprehenderit, et nam necessitatibus fugiat nulla a quae deserunt. Porro
+        </p>
+        <div className="relative mx-auto max-w-[880px] py-10">
+          <SliderGroup />
+          <div className="absolute left-0 top-0 z-50 h-full w-20 bg-gradient-to-l from-transparent to-white"></div>
+          <div className="absolute right-0 top-0 z-50 h-full w-20 bg-gradient-to-r from-transparent to-white"></div>
+        </div>
+        <div className="flex items-center justify-center gap-x-4">
+          <Link href="/search" className="font-meidum rounded-lg bg-[#171717] px-3.5 py-4 text-sm text-white">
+            本を検索する
+          </Link>
+          <Link href="/library" className="font-meidum rounded-lg border border-[#ebebeb] px-3.5 py-4 text-sm text-[#171717]">
+            マイライブラリを見る
+          </Link>
+        </div>
+      </div>
+      <div className="mx-auto mt-[200px] flex max-w-[1200px]">
+        <div className="w-1/3">
+          <h2 className="pl-10 text-[32px] font-extrabold text-[#171717]">Book Search</h2>
+          <p className="py-6 pl-10 text-[18px] leading-[1.8] text-[#666]">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur libero odit sed harum reprehenderit dignissimos facere ipsa eligendi
+            inventore dolores alias earum voluptatem labore, eaque et eveniet consequatur nam deleniti?
           </p>
         </div>
-        <div className="flex flex-col gap-y-4">
-          <SlideToLeft />
-          <SlideToRight />
+        <div className="w-2/3">
+          <SearchDemo />
         </div>
-      </Section>
-      <Section>
-        <SectionTitle title="ちょっとした機能" />
-        <Accordion />
-      </Section>
-      <Section>
-        <SectionTitle title="たくさんの本を見つけます。" />
-        <div className="flex items-center justify-center lg:h-[600px]">
-          <div className="relative">
-            <img src="/macpro.jpg" />
-            <img src="/book-sample.png" className="absolute right-0 top-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
-            <img src="/book-sample.png" className="absolute right-0 top-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
-            <img src="/book-sample.png" className="absolute right-0 top-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
-            <img src="/book-sample.png" className="absolute right-0 top-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
-            <img src="/book-sample.png" className="absolute left-64 top-20 w-40 overflow-hidden rounded-lg border border-gray-100" />
-            <img src="/book-sample.png" className="absolute left-[10rem] top-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
-            <img src="/book-sample.png" className="absolute bottom-10 left-0 w-40 overflow-hidden rounded-lg border border-gray-100" />
-            <img src="/book-sample.png" className="absolute bottom-2 left-40 w-40 overflow-hidden rounded-lg border border-gray-100" />
+      </div>
+      <div className="mx-auto mt-[200px] flex max-w-[1200px]">
+        <div className="w-1/2">
+          <h2 className="pl-10 text-[32px] font-extrabold text-[#171717]">Book Search</h2>
+          <p className="py-6 pl-10 text-[18px] leading-[1.8] text-[#666]">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur libero odit sed harum reprehenderit dignissimos facere ipsa eligendi
+            inventore dolores alias earum voluptatem labore, eaque et eveniet consequatur nam deleniti?
+          </p>
+        </div>
+        <div className="w-1/2">
+          <SearchDemo />
+        </div>
+      </div>
+      <div className="mt-[200px]">
+        <h2 className="pl-10 text-center text-[40px] font-extrabold text-[#171717]">Development</h2>
+        <div className="mx-auto mt-14 grid max-w-[1200px] grid-cols-3 gap-x-4 gap-y-4">
+          <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
+            <div className="h-10 w-10">
+              <svg fill="none" height="40" viewBox="0 0 180 180" width="40" xmlns="http://www.w3.org/2000/svg">
+                <g mask="url(#mask0_292_290)">
+                  <circle cx="90" cy="90" fill="black" r="87" stroke="var( --next-icon-border)" strokeWidth="6"></circle>
+                  <path
+                    d="M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z"
+                    fill="url(#paint0_linear_292_290)"
+                  ></path>
+                  <rect fill="url(#paint1_linear_292_290)" height="72" width="12" x="115" y="54"></rect>
+                </g>
+                <defs>
+                  <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_292_290" x1="109" x2="144.5" y1="116.5" y2="160.5">
+                    <stop stopColor="white"></stop>
+                    <stop offset="1" stopColor="white" stopOpacity="0"></stop>
+                  </linearGradient>
+                  <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear_292_290" x1="121" x2="120.799" y1="54" y2="106.875">
+                    <stop stopColor="white"></stop>
+                    <stop offset="1" stopColor="white" stopOpacity="0"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">Next.js</h3>
+            <p className="mt-2 text-sm text-[#666]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
+              dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
+            </p>
+          </div>
+          <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
+            <div className="h-10 w-10">
+              <img src="/ts-logo.png" className="rounded" />
+            </div>
+            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">Next.js</h3>
+            <p className="mt-2 text-sm text-[#666]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
+              dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
+            </p>
+          </div>
+          <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
+            <div className="h-10 w-10 bg-[#fafafa]"></div>
+            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">Next.js</h3>
+            <p className="mt-2 text-sm text-[#666]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
+              dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
+            </p>
+          </div>
+          <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
+            <div className="h-10 w-10">
+              <img src="https://nextjs.org/icons/react.svg" />
+            </div>
+            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">React</h3>
+            <p className="mt-2 text-sm text-[#666]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
+              dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
+            </p>
+          </div>
+          <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
+            <div className="h-10 w-10 bg-[#fafafa]"></div>
+            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">Next.js</h3>
+            <p className="mt-2 text-sm text-[#666]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
+              dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
+            </p>
+          </div>
+          <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
+            <div className="h-10 w-10 bg-[#fafafa]"></div>
+            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">Next.js</h3>
+            <p className="mt-2 text-sm text-[#666]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
+              dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
+            </p>
           </div>
         </div>
-      </Section>
-      <Section backgroundColor="bg-[#fafafa]">
-        <SectionTitle title="使用技術を紹介します。" />
-        <Carousel />
-      </Section>
-      <Section>
-        <div className="mx-auto flex max-w-2xl gap-x-6">
-          <div className="w-1/2 rounded-lg bg-gray-100 px-6 py-8">
-            <Router title="GitHub" url="https://github.com/daxchx/book-search-app">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, maxime ipsum! Natus corrupti temporibus facilis at, odit voluptatibus officiis
-              numquam. Porro, ab odio! Alias blanditiis ipsum, sed non voluptate vero.
-            </Router>
-          </div>
-          <div className="w-1/2 rounded-lg bg-gray-100 p-6">
-            <Router title="Google Books API" url="https://developers.google.com/books?hl=ja">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, maxime ipsum! Natus corrupti temporibus facilis at, odit voluptatibus officiis
-              numquam. Porro, ab odio! Alias blanditiis ipsum, sed non voluptate vero.
-            </Router>
-          </div>
+        <div className="mt-[200px]">
+          <div></div>
         </div>
-      </Section>
-    </>
-  )
-}
-
-function Router({ title, children, url }: { title: string; children: string; url: string }) {
-  return (
-    <>
-      <h3 className="mb-4 text-[24px] font-semibold text-[#1d1d1f]">{title}</h3>
-      <p className="text-[#1d1d1f]">{children}</p>
-      <Link href={url} target="_blank" className="rounded bg-emerald-500 px-2 py-1 text-white">
-        {title}へ
-      </Link>
+      </div>
     </>
   )
 }

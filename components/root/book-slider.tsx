@@ -1,25 +1,23 @@
 import Image from 'next/image'
 
-export default function SlideToLeft() {
+export default function SliderGroup() {
+  return <SlideToLeft />
+}
+
+function SlideToLeft() {
   return (
-    <div className="mx-auto flex w-full gap-x-4 overflow-hidden">
-      <div className="flex min-w-[100rem] animate-[slideToRight_30s_infinite_linear_0.5s_both] gap-x-4">
+    <div className="mx-auto flex w-[880px] overflow-hidden">
+      <div className="flex min-w-[880px] animate-[slideToRight_30s_infinite_linear_0.5s_both] gap-x-4 pl-4">
         <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
+        <SlideItem imageUrl="/slide-item2.png" />
+        <SlideItem imageUrl="/slide-item3.jpg" />
         <SlideItem />
         <SlideItem />
       </div>
-      <div className="flex min-w-[100rem] animate-[slideToRight_30s_infinite_linear_0.5s_both] gap-x-4">
+      <div className="flex min-w-[880px] animate-[slideToRight_30s_infinite_linear_0.5s_both] gap-x-4 pl-4">
         <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
+        <SlideItem imageUrl="/slide-item2.png" />
+        <SlideItem imageUrl="/slide-item3.jpg" />
         <SlideItem />
         <SlideItem />
       </div>
@@ -27,37 +25,18 @@ export default function SlideToLeft() {
   )
 }
 
-export function SlideToRight() {
+function SlideItem({ imageUrl }: { imageUrl?: string }) {
   return (
-    <div className="mx-auto flex w-full flex-row-reverse gap-x-4 overflow-hidden">
-      <div className="flex min-w-[100rem] animate-[slideToLeft_30s_infinite_linear_0.5s_both] gap-x-4">
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-      </div>
-      <div className="flex min-w-[100rem] animate-[slideToLeft_30s_infinite_linear_0.5s_both] gap-x-4">
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-        <SlideItem />
-      </div>
-    </div>
-  )
-}
-
-function SlideItem() {
-  return (
-    <div className="w-1/5 rounded bg-gray-200">
-      <Image className="rounded-lg border border-gray-200" src="/book-sample.png" width={186} height={240} alt="" />
-    </div>
+    <>
+      {imageUrl ? (
+        <div>
+          <Image className="rounded-lg border border-gray-200 shadow-sm" src={imageUrl} width={176} height={352} alt="" />
+        </div>
+      ) : (
+        <div className="w-1/5">
+          <Image className="rounded-lg border border-gray-200 shadow-sm" src="/slide-item1.jpg" width={176} height={352} alt="" />
+        </div>
+      )}
+    </>
   )
 }
