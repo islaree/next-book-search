@@ -91,7 +91,7 @@ export default function RootPage() {
             <div className="h-10 w-10">
               <img src="/ts-logo.png" className="rounded" />
             </div>
-            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">Next.js</h3>
+            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">React</h3>
             <p className="mt-2 text-sm text-[#666]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
               dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
@@ -99,7 +99,7 @@ export default function RootPage() {
           </div>
           <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
             <div className="h-10 w-10 bg-[#fafafa]"></div>
-            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">Next.js</h3>
+            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">TypeScript</h3>
             <p className="mt-2 text-sm text-[#666]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
               dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
