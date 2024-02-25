@@ -109,7 +109,7 @@ export default function RootPage() {
             <div className="h-10 w-10">
               <img src="https://nextjs.org/icons/react.svg" />
             </div>
-            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">React</h3>
+            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">someone</h3>
             <p className="mt-2 text-sm text-[#666]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
               dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
