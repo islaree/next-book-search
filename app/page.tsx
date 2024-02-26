@@ -1,7 +1,10 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import SliderGroup from '@/components/root/book-slider'
 import SearchDemo from '@/components/root/search-demo'
+import LibraryDemo from '@/components/root/library-demo'
+import { AnimateScale, AnimateTranslateX } from '@/components/root/animate'
 
 export const metadata: Metadata = {
   title: 'Books - Home',
@@ -12,7 +15,9 @@ export default function RootPage() {
   return (
     <>
       <div className="lg:mt-20 lg:px-14">
-        <h1 className="p-6 text-center text-[60px] font-extrabold text-[#171717]">Book Search App using Google Books API</h1>
+        <h1 className="p-6 text-center text-[48px] font-extrabold leading-none tracking-tighter text-[#171717] lg:text-[60px]">
+          Book Search App using Google Books API
+        </h1>
         <p className="px-8 py-10 text-center text-[18px] leading-[1.8] text-[#666]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
           <br /> repellendus sit! Reprehenderit, et nam necessitatibus fugiat nulla a quae deserunt. Porro
@@ -31,33 +36,39 @@ export default function RootPage() {
           </Link>
         </div>
       </div>
-      <div className="mx-auto mt-[200px] flex max-w-[1200px]">
+
+      <div className="mx-auto mt-[200px] flex max-w-[1200px] flex-col lg:flex-row">
         <div className="w-1/3">
-          <h2 className="pl-10 text-[32px] font-extrabold text-[#171717]">Book Search</h2>
+          <h2 className="pl-10 text-[32px] font-extrabold text-[#171717]">Search Book</h2>
           <p className="py-6 pl-10 text-[18px] leading-[1.8] text-[#666]">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur libero odit sed harum reprehenderit dignissimos facere ipsa eligendi
             inventore dolores alias earum voluptatem labore, eaque et eveniet consequatur nam deleniti?
           </p>
         </div>
         <div className="w-2/3">
-          <SearchDemo />
+          <AnimateScale>
+            <SearchDemo />
+          </AnimateScale>
         </div>
       </div>
-      <div className="mx-auto mt-[200px] flex max-w-[1200px]">
+
+      <div className="mx-auto mt-[200px] max-w-[1200px]">
         <div className="w-1/2">
-          <h2 className="pl-10 text-[32px] font-extrabold text-[#171717]">Book Search</h2>
+          <h2 className="pl-10 text-[32px] font-extrabold text-[#171717]">Likes Book</h2>
           <p className="py-6 pl-10 text-[18px] leading-[1.8] text-[#666]">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur libero odit sed harum reprehenderit dignissimos facere ipsa eligendi
             inventore dolores alias earum voluptatem labore, eaque et eveniet consequatur nam deleniti?
           </p>
         </div>
-        <div className="w-1/2">
-          <SearchDemo />
+        <div>
+          <AnimateTranslateX>
+            <LibraryDemo />
+          </AnimateTranslateX>
         </div>
       </div>
       <div className="mt-[200px]">
-        <h2 className="pl-10 text-center text-[40px] font-extrabold text-[#171717]">Development</h2>
-        <div className="mx-auto mt-14 grid max-w-[1200px] grid-cols-3 gap-x-4 gap-y-4">
+        <h2 className="text-center text-[40px] font-extrabold text-[#171717]">Development</h2>
+        <div className="mx-auto mt-14 grid max-w-[1200px] grid-cols-1 gap-x-4 gap-y-4 px-10 lg:grid-cols-3">
           <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
             <div className="h-10 w-10">
               <svg fill="none" height="40" viewBox="0 0 180 180" width="40" xmlns="http://www.w3.org/2000/svg">
@@ -89,7 +100,7 @@ export default function RootPage() {
           </div>
           <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
             <div className="h-10 w-10">
-              <img src="/ts-logo.png" className="rounded" />
+              <img src="https://nextjs.org/icons/react.svg" />
             </div>
             <h3 className="mt-6 text-[20px] font-bold text-[#171717]">React</h3>
             <p className="mt-2 text-sm text-[#666]">
@@ -98,34 +109,10 @@ export default function RootPage() {
             </p>
           </div>
           <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
-            <div className="h-10 w-10 bg-[#fafafa]"></div>
-            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">TypeScript</h3>
-            <p className="mt-2 text-sm text-[#666]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
-              dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
-            </p>
-          </div>
-          <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
             <div className="h-10 w-10">
-              <img src="https://nextjs.org/icons/react.svg" />
+              <img src="/ts-logo.png" className="rounded" />
             </div>
-            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">someone</h3>
-            <p className="mt-2 text-sm text-[#666]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
-              dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
-            </p>
-          </div>
-          <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
-            <div className="h-10 w-10 bg-[#fafafa]"></div>
-            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">Next.js</h3>
-            <p className="mt-2 text-sm text-[#666]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
-              dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
-            </p>
-          </div>
-          <div className="rounded-lg border border-[#ebebeb] px-6 py-8">
-            <div className="h-10 w-10 bg-[#fafafa]"></div>
-            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">Next.js</h3>
+            <h3 className="mt-6 text-[20px] font-bold text-[#171717]">TypeScript</h3>
             <p className="mt-2 text-sm text-[#666]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis culpa ratione alias? Nam in delectus laudantium consequatur temporibus, sint
               dolore necessitatibus quae quam accusantium architecto nesciunt culpa, laborum maiores ullam!
@@ -133,7 +120,59 @@ export default function RootPage() {
           </div>
         </div>
         <div className="mt-[200px]">
-          <div></div>
+          <h2 className="text-center text-[40px] font-extrabold text-[#171717]">Let's Go on a Journey to Find a Book</h2>
+          <AnimateScale>
+            <div className="relative mt-14 flex w-full justify-center gap-x-6 overflow-hidden">
+              <div className="flex w-[400px] shrink-0 flex-col gap-y-6">
+                <div className="overflow-hidden rounded border border-[#ebebeb]">
+                  <Image src="/pc1.png" width={1280} height={1024} alt="a" />
+                </div>
+                <div className="overflow-hidden rounded border border-[#ebebeb]">
+                  <Image src="/pc1.png" width={1280} height={1024} alt="a" />
+                </div>
+              </div>
+              <div className="flex w-[300px] shrink-0 flex-col gap-y-6 overflow-hidden rounded border border-[#ebebeb]">
+                <div className="bg-black">
+                  <Image src="/sp.jpg" width={600} height={1200} alt="a" />
+                </div>
+              </div>
+              <div className="flex w-[400px] shrink-0 flex-col gap-y-6">
+                <div className="overflow-hidden rounded border border-[#ebebeb]">
+                  <Image src="/pc1.png" width={1280} height={1024} alt="a" />
+                </div>
+                <div className="flex gap-x-6">
+                  <div className="w-1/2">
+                    <div className="overflow-hidden rounded border border-[#ebebeb]">
+                      <Image src="/pc1.png" width={1280} height={1024} alt="a" />
+                    </div>
+                  </div>
+                  <div className="w-1/2">
+                    <div className="overflow-hidden rounded border border-[#ebebeb]">
+                      <Image src="/pc1.png" width={1280} height={1024} alt="a" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex w-[400px] shrink-0 flex-col gap-y-6">
+                <div className="overflow-hidden rounded border border-[#ebebeb]">
+                  <Image src="/pc1.png" width={1280} height={1024} alt="a" />
+                </div>
+                <div className="overflow-hidden rounded border border-[#ebebeb]">
+                  <Image src="/pc1.png" width={1280} height={1024} alt="a" />
+                </div>
+              </div>
+              <div className="absolute bottom-0 left-0 h-[400px] w-screen bg-gradient-to-b from-transparent to-white to-70%"></div>
+            </div>
+          </AnimateScale>
+
+          <div className="flex items-center justify-center gap-x-4">
+            <Link href="/search" className="font-meidum rounded-lg bg-[#171717] px-3.5 py-4 text-sm text-white">
+              本を検索する
+            </Link>
+            <Link href="/library" className="font-meidum rounded-lg border border-[#ebebeb] px-3.5 py-4 text-sm text-[#171717]">
+              マイライブラリを見る
+            </Link>
+          </div>
         </div>
       </div>
     </>
