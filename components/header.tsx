@@ -12,7 +12,7 @@ export default function Header({ isActive, onClick }: { isActive: boolean; onCli
       <header className="sticky top-0 z-30 flex w-full justify-center bg-white px-6">
         <div className="flex h-16 w-full max-w-[1400px] items-center justify-between lg:justify-start lg:gap-x-10">
           <Link href="/">
-            <Image src="/logo.svg" alt="logo" width={0} height={0} className="h-auto w-6" priority={true} />
+            <Image src="/icon-logo.svg" alt="logo" width={0} height={0} className="h-auto w-6" priority={true} />
           </Link>
           <div className="mr-[-24px] flex flex-col items-center justify-center lg:hidden">
             <div onClick={onClick} className="flex h-16 w-16 items-center justify-center">
@@ -40,8 +40,7 @@ export default function Header({ isActive, onClick }: { isActive: boolean; onCli
           <div className="flex h-16 w-full items-center justify-between border-b border-gray-200">
             <div onClick={onClick}>
               <Link href="/" className="flex items-center gap-x-1 pl-6">
-                <Image src="/logo.svg" alt="logo" width={0} height={0} className="h-auto w-6" />
-                <div className="text-md font-bold leading-none text-[#1c2b33]">bookmark</div>
+                <Image src="/icon-logo.svg" alt="logo" width={0} height={0} className="h-auto w-6" />
               </Link>
             </div>
             <div onClick={onClick} className="ml-auto flex h-16 w-16 items-center justify-center">
