@@ -71,7 +71,7 @@ function Preview() {
           <div className="h-2 w-2 rounded-full bg-[#ebebeb]"></div>
         </div>
         <div className="relative h-full w-full overflow-hidden bg-white">
-          <Image src="/preview-pc.png" alt="default" width={1400} height={980} />
+          <video src="/videos/search-video.mp4" loop={true} autoPlay={true} muted={true} playsInline={true}></video>
         </div>
       </div>
     </motion.div>
