@@ -29,6 +29,7 @@ export default async function SearchResultsList({ keyword }: { keyword: string }
                       width={128}
                       height={168}
                       alt="thumbnail"
+                      unoptimized
                     />
                   ) : (
                     <div className="flex h-[104px] w-20 items-center justify-center rounded bg-gray-200 text-xs font-bold italic text-gray-400">no image</div>

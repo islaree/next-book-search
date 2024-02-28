@@ -26,6 +26,7 @@ export default async function Book({ id }: { id: string }) {
               width={128}
               height={168}
               alt="thumbnail"
+              unoptimized
             />
           )}
         </div>
