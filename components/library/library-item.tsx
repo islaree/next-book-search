@@ -21,6 +21,7 @@ export default function LibraryItem({ book }: { book: LibraryItemProps }) {
               width={80}
               height={112}
               alt={book.title}
+              unoptimized
             />
           ) : (
             <div className="flex h-[90px] w-16 items-center justify-center rounded border border-slate-200 bg-slate-50 text-xs text-slate-400">not image</div>
