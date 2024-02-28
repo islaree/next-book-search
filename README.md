@@ -35,6 +35,32 @@
 </div>
 
 書籍のリソースページから「マイラブラリに追加する」を選択することで、マイライブラリに一時保存することが可能です。
+
 マイラブラリから書籍を削除するには、書籍のリソースページから「マイライブラリから削除する」を選択します。
 
 ※一時保存のため、ブラウザをリロードするとマイライブラリに保存されていた書籍はリセットされます。
+
+## 技術スタック
+
+<table>
+  <tr align="left">
+    <th>Style</th>
+    <td><a href="https://tailwindcss.com/">TailwindCSS</a></td>
+  </tr>
+  <tr align="left">
+    <th>Language</th>
+    <td><a href="https://www.typescriptlang.org/">TypeScript</a></td>
+  </tr>
+  <tr align="left">
+    <th>Framework</th>
+    <td><a href="https://nextjs.org/">Next.js</a></td>
+  </tr>
+  <tr align="left">
+    <th>Library</th>
+    <td><a href="https://ja.react.dev/">React</a></td>
+  </tr>
+  <tr align="left">
+    <th>Deploy</th>
+    <td><a href="https://vercel.com/">Vercel</a></td>
+  </tr>
+</table>
