@@ -1,6 +1,6 @@
 'use client'
 
-import { useDataContext } from '../../components/dataContext'
+import { useDataContext } from '../../components/context'
 import LibraryList from '@/components/library/library-list'
 
 export default function LibraryPage() {

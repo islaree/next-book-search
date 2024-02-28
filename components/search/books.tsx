@@ -1,7 +1,7 @@
-import { cache } from 'react'
 import Link from 'next/link'
-import { bookItems } from '@/types/book'
 import Image from 'next/image'
+import { cache } from 'react'
+import { bookItems } from '@/types/book'
 
 const getData = cache(async (keyword: string) => {
   const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${keyword}`)

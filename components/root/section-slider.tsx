@@ -1,13 +1,9 @@
 'use client'
 
-import { useRef } from 'react'
 import Image from 'next/image'
-import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from 'framer-motion'
 import { wrap } from '@motionone/utils'
-
-interface ParallaxProps {
-  baseVelocity: number
-}
+import { useRef } from 'react'
+import { motion, useScroll, useSpring, useTransform, useMotionValue, useVelocity, useAnimationFrame } from 'framer-motion'
 
 function Card({ imgUrl }: { imgUrl: string }) {
   return (
@@ -17,7 +13,7 @@ function Card({ imgUrl }: { imgUrl: string }) {
   )
 }
 
-function ParallaxCards({ baseVelocity = 100 }: ParallaxProps) {
+function Cards({ baseVelocity = 100 }: { baseVelocity: number }) {
   const baseX = useMotionValue(0)
   const { scrollY } = useScroll()
   const scrollVelocity = useVelocity(scrollY)
@@ -79,8 +75,8 @@ function ParallaxCards({ baseVelocity = 100 }: ParallaxProps) {
 export default function ParallaxSection() {
   return (
     <div className="mt-[80px] lg:mt-[200px]">
-      <ParallaxCards baseVelocity={-5} />
-      <ParallaxCards baseVelocity={5} />
+      <Cards baseVelocity={-5} />
+      <Cards baseVelocity={5} />
     </div>
   )
 }

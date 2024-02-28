@@ -2,7 +2,12 @@ import { ChangeEventHandler } from 'react'
 import { IconContext } from 'react-icons'
 import { CgSearch } from 'react-icons/cg'
 
-export default function Search({ value, onChange }: { value: string; onChange: ChangeEventHandler<HTMLInputElement> }) {
+interface SearchProps {
+  value: string
+  onChange: ChangeEventHandler<HTMLInputElement>
+}
+
+export default function Search({ value, onChange }: SearchProps) {
   return (
     <>
       <div className="p-6">

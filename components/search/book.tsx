@@ -17,9 +17,7 @@ export default async function Book({ id }: { id: string }) {
   return (
     <>
       <div className="relative overflow-hidden border-b border-gray-200">
-        <div className="flex h-56 w-full items-center justify-center overflow-hidden bg-gray-300 opacity-60">
-          {data.volumeInfo.imageLinks && <img className="w-full scale-150 blur" src={data.volumeInfo.imageLinks.thumbnail.replace('http', 'https')} alt="a" />}
-        </div>
+        <div className="flex h-56 w-full items-center justify-center overflow-hidden bg-gray-300 opacity-60"></div>
         <div className="absolute left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%]">
           {data.volumeInfo.imageLinks && (
             <Image
