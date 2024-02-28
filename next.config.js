@@ -6,5 +6,6 @@ module.exports = {
         hostname: 'books.google.com',
       },
     ],
+    unoptimized: false,
   },
 }
