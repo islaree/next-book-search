@@ -10,10 +10,9 @@ export default function FirstView() {
   const isInView = useInView(ref, { once: true })
   return (
     <>
-      <div className="lg:mt-20 lg:px-14">
+      <div className="lg:mt-20 lg:px-14" ref={ref}>
         <div
-          className="mb-[80px] flex justify-center"
-          ref={ref}
+          className="hidden justify-center lg:flex lg:w-full"
           style={{
             transform: isInView ? 'none' : 'translateY(100px)',
             opacity: isInView ? 1 : 0,
@@ -23,8 +22,7 @@ export default function FirstView() {
           <Image src="/icons/icon-logo.svg" alt="search-book-app" width={160} height={160} />
         </div>
         <h1
-          className="p-6 text-center text-[48px] font-extrabold leading-none tracking-tighter text-[#171717] lg:text-[60px]"
-          ref={ref}
+          className="mt-[40px] p-6 text-center text-[48px] font-extrabold leading-none tracking-tighter text-[#171717] lg:mt-[80px] lg:text-[60px]"
           style={{
             transform: isInView ? 'none' : 'translateY(100px)',
             opacity: isInView ? 1 : 0,
@@ -35,7 +33,6 @@ export default function FirstView() {
         </h1>
         <p
           className="px-8 py-10 text-center text-[18px] leading-[1.8] text-[#666]"
-          ref={ref}
           style={{
             transform: isInView ? 'none' : 'translateY(100px)',
             opacity: isInView ? 1 : 0,
@@ -48,7 +45,6 @@ export default function FirstView() {
         </p>
         <div
           className="flex items-center justify-center gap-x-4"
-          ref={ref}
           style={{
             transform: isInView ? 'none' : 'translateY(100px)',
             opacity: isInView ? 1 : 0,

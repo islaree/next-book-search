@@ -17,7 +17,22 @@ export default function LibrarySection() {
 }
 
 function Title({ title }: { title: string }) {
-  return <h2 className="p-6 text-center text-[40px] font-extrabold leading-none tracking-tighter text-[#171717] lg:text-[48px]">{title}</h2>
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
+
+  return (
+    <h2
+      className="p-6 text-center text-[40px] font-extrabold leading-none tracking-tighter text-[#171717] lg:text-[48px]"
+      ref={ref}
+      style={{
+        transform: isInView ? 'none' : 'translateY(100px)',
+        opacity: isInView ? 1 : 0,
+        transition: 'transform 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s, opacity 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s',
+      }}
+    >
+      {title}
+    </h2>
+  )
 }
 
 function Description({ children }: { children: string }) {

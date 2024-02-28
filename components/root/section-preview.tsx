@@ -3,10 +3,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, useInView } from 'framer-motion'
 
 export default function PreviewSection() {
   const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end end'],
@@ -15,7 +16,15 @@ export default function PreviewSection() {
 
   return (
     <div className="w-full overflow-hidden py-[200px]">
-      <h2 className="p-6 text-center text-[40px] font-extrabold leading-none tracking-tighter text-[#171717] lg:text-[48px]">
+      <h2
+        className="p-6 text-center text-[40px] font-extrabold leading-none tracking-tighter text-[#171717] lg:text-[48px]"
+        ref={ref}
+        style={{
+          transform: isInView ? 'none' : 'translateY(100px)',
+          opacity: isInView ? 1 : 0,
+          transition: 'transform 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s, opacity 0.7s cubic-bezier(0.17, 0.55, 0.55, 1) 0.7s',
+        }}
+      >
         Lets Go on a Journey to Find a Book
       </h2>
       <motion.div
