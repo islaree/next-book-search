@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="mt-auto">
       <div className="flex flex-col items-center justify-center border-t border-gray-200 px-6 py-10">
         <div>
           <Image src="/icon-logo.svg" alt="logo" width={0} height={0} className="h-auto w-4" />

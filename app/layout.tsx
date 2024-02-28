@@ -23,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${active ? 'h-full overflow-hidden' : ''} ${inter.className}`}>
+      <body className={`flex min-h-screen flex-col ${active ? 'h-full overflow-hidden' : ''} ${inter.className}`}>
         <Header isActive={active} onClick={handleClick} />
         <DataProvider>{children}</DataProvider>
         <Footer />
