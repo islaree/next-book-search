@@ -1,13 +1,11 @@
 ## 書籍の検索アプリケーション
-![Videotogif (1)](https://github.com/daxchx/book-search/assets/149696768/83f8b1ec-4499-48a7-b8e9-6ac5713d5552)
+![書籍の検索アプリケーション](https://github.com/daxchx/book-search/assets/149696768/83f8b1ec-4499-48a7-b8e9-6ac5713d5552)
 
 このアプリケーションは、Google Books APIのボリュームコレクションを使用した書籍の検索や書籍リソースの確認ができるアプリケーションです。
 
 ## 書籍の検索
 
-<div>
-  <img src="https://github.com/daxchx/book-search/assets/149696768/81c8d007-5807-45dc-b048-cb2747c262be" alt="image" width="auto" height="auto" />
-</div>
+![書籍の検索](https://github.com/daxchx/book-search/assets/149696768/81c8d007-5807-45dc-b048-cb2747c262be)
 
 検索バーに書籍に関連するキーワードを入力するすることで、簡単に検索が行なえます。
 
@@ -17,9 +15,7 @@
 
 ## 書籍のリソースを確認
 
-<div>
-  <img src="https://github.com/daxchx/book-search-app/assets/149696768/27ffff60-a423-4005-8282-b54b26928a36" alt="image" width="400" height="auto" />
-</div>
+![書籍のリソースを確認](https://github.com/daxchx/book-search/assets/149696768/649eef1d-8474-43a6-bdb8-6bbd02c3c959)
 
 検索結果として表示された書籍を選択すると、その書籍のリソースを確認できます。
 
@@ -33,9 +29,8 @@
 - 概要説明
 
 ## 書籍データの一時保存
-<div>
-  <img src="https://github.com/daxchx/book-search-app/assets/149696768/2d26cfd2-8727-4ed8-b978-69e80fc10f17" alt="image" width="400" height="auto" />
-</div>
+
+
 
 書籍のリソースページから「マイラブラリに追加する」を選択することで、マイライブラリに一時保存することが可能です。
 
