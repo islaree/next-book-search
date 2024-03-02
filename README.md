@@ -1,12 +1,11 @@
 ## 書籍の検索アプリケーション
 
 ![書籍の検索アプリケーション](https://github.com/daxchx/book-search/assets/149696768/83f8b1ec-4499-48a7-b8e9-6ac5713d5552)
+![Videotogif (1) (1)](https://github.com/daxchx/book-search/assets/149696768/ce3296da-67e4-486d-b219-a0179d23af19)
 
 このアプリケーションは、Google Books APIのボリュームコレクションを使用した書籍の検索や書籍リソースの確認ができるアプリケーションです。
 
 ## 書籍の検索
-
-![書籍の検索](https://github.com/daxchx/book-search/assets/149696768/81c8d007-5807-45dc-b048-cb2747c262be)
 
 検索バーに書籍に関連するキーワードを入力するすることで、簡単に検索が行なえます。
 
@@ -15,8 +14,6 @@
 検索結果として最大10件の書籍を一覧表示します。
 
 ## 書籍のリソースを確認
-
-![書籍のリソースを確認](https://github.com/daxchx/book-search/assets/149696768/338054f8-4b1b-4ee6-81d2-0c8e42ac45d0)
 
 検索結果として表示された書籍を選択すると、その書籍のリソースを確認できます。
 
