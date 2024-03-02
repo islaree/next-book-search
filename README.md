@@ -15,7 +15,7 @@
 
 ## 書籍のリソースを確認
 
-![書籍のリソースを確認](https://github.com/daxchx/book-search/assets/149696768/649eef1d-8474-43a6-bdb8-6bbd02c3c959)
+![書籍のリソースを確認](https://github.com/daxchx/book-search/assets/149696768/338054f8-4b1b-4ee6-81d2-0c8e42ac45d0)
 
 検索結果として表示された書籍を選択すると、その書籍のリソースを確認できます。
 
@@ -78,20 +78,3 @@ cache関数を使用することでフェッチしたデータはcacheに保存�
 データの取得はサーバコンポーネントで行っています。
 
 サスペンスフォールバックを用いて、フェッチが完了するまでの待機時間にスケルトンを表示しました。
-
-[!NOTE]
-Useful information that users should know, even when skimming content.
-
-[!TIP]
-Helpful advice for doing things better or more easily.
-
-[!IMPORTANT]
-Key information users need to know to achieve their goal.
-
-[!WARNING]
-Urgent info that needs immediate user attention to avoid problems.
-
-[!CAUTION]
-Advises about risks or negative outcomes of certain actions.
-
-スケルトンを使用することでLCPやCLSが改善され、UXを向上させました。
