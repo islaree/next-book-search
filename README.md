@@ -2,7 +2,7 @@
 
 <img src="https://github.com/daxchx/book-search-app/assets/149696768/a7b9553b-ac2b-49cb-9485-2351dd4675c1" alt="thumbnail" />
 
-このアプリケーションでは、Google Books APIのボリュームコレクションを利用して、書籍の検索、書籍のリソース取得が可能です。
+このアプリケーションは、Google Books APIのボリュームコレクションを使用した書籍の検索や書籍リソースの確認ができるアプリケーションです。
 
 ## 書籍の検索
 
