@@ -21,8 +21,16 @@
 ## 技術的な側面
 
 <div style="display:inline;">
-  <img src="https://img.shields.io/badge/typescript-white?style=for-the-badge&logo=typescript" />
-  <img src="https://img.shields.io/badge/figma-black?style=for-the-badge&logo=figma" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/typescript-white?style=for-the-badge&logo=typescript">
+    <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/typescript-black?style=for-the-badge&logo=typescript">
+    <img src="https://img.shields.io/badge/typescript-black?style=for-the-badge&logo=typescript" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/figma-white?style=for-the-badge&logo=figma">
+    <source media="(prefers-color-scheme: light)" srcset="https://img.shields.io/badge/figma-black?style=for-the-badge&logo=figma">
+    <img src="https://img.shields.io/badge/figma-black?style=for-the-badge&logo=figma" />
+  </picture>
 </div>
 
 使用した技術やプログラミング言語、フレームワーク、ライブラリについて具体的に記述します。技術的な決定の理由や他の選択肢との比較も含めると良いです。
