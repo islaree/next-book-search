@@ -20,7 +20,10 @@
 
 ## 技術的な側面
 
-<img src="https://camo.qiitausercontent.com/a1c82dde1e505a2f11e0575cf726515a7112e072/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d547970655363726970742d3030303030302e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d74797065736372697074266c6f676f436f6c6f723d363144414642" />
+<div style="display:inline;">
+  <img src="https://img.shields.io/badge/typescript-white?style=for-the-badge&logo=typescript" />
+  <img src="https://img.shields.io/badge/figma-black?style=for-the-badge&logo=figma" />
+</div>
 
 使用した技術やプログラミング言語、フレームワーク、ライブラリについて具体的に記述します。技術的な決定の理由や他の選択肢との比較も含めると良いです。
 
