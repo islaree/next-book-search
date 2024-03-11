@@ -2,11 +2,13 @@
 
 ![書籍の検索アプリケーション](https://github.com/daxchx/book-search/assets/149696768/d7e1de76-5eb9-4e31-9ee8-29b8b848df27)
 
-このアプリケーションは、Google Books APIのボリュームコレクションを使用した書籍の検索や書籍リソースの確認ができるアプリケーションです。
+このアプリケーションは、<a href="https://developers.google.com/books?hl=ja">Google Books API</a>を使用した書籍の検索やリソース確認、お気に入り保存ができるアプリケーションです。
 
-<a href="https://book-app-roan.vercel.app/">アプリケーションを利用してみる</a>
+以下からアプリケーションをご利用ください。
 
-このアプリケーションの使用方法についての詳細はWikiを確認してください。
+- <a href="https://book-app-roan.vercel.app/">アプリケーションを使用する</a>
+- <a href="https://github.com/daxchx/book-search/wiki">使用方法を確認する</a>
+
 
 ## プロジェクトの背景と目的
 
@@ -18,16 +20,17 @@
 
 このプロジェクトは、技術選定、デザイン、フロントエンドの実装を一人で行いました。
 
-## 技術的な側面
+## 技術スタック一覧
 
 <div style="display:inline;">
     <img src="https://img.shields.io/badge/react-black?style=for-the-badge&logo=react" />
     <img src="https://img.shields.io/badge/next.js-black?style=for-the-badge&logo=next.js" />
     <img src="https://img.shields.io/badge/typescript-black?style=for-the-badge&logo=typescript" />
+    <img src="https://img.shields.io/badge/tailwindcss-black?style=for-the-badge&logo=tailwindcss" />
+    <img src="https://img.shields.io/badge/node.js-black?style=for-the-badge&logo=node.js" />
+    <img src="https://img.shields.io/badge/vercel-black?style=for-the-badge&logo=vercel" />
     <img src="https://img.shields.io/badge/figma-black?style=for-the-badge&logo=figma" />
 </div>
-
-使用した技術やプログラミング言語、フレームワーク、ライブラリについて具体的に記述します。技術的な決定の理由や他の選択肢との比較も含めると良いです。
 
 #### React
 
