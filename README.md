@@ -1,4 +1,4 @@
-# 書籍の検索アプリケーション
+## 書籍の検索アプリケーション
 
 ![書籍の検索アプリケーション](https://github.com/daxchx/book-search/assets/149696768/d7e1de76-5eb9-4e31-9ee8-29b8b848df27)
 
