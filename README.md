@@ -25,7 +25,6 @@
     <img src="https://img.shields.io/badge/tailwindcss-black?style=for-the-badge&logo=tailwindcss" />
     <img src="https://img.shields.io/badge/node.js-black?style=for-the-badge&logo=node.js" />
     <img src="https://img.shields.io/badge/vercel-black?style=for-the-badge&logo=vercel" />
-    <img src="https://img.shields.io/badge/figma-black?style=for-the-badge&logo=figma" />
 </div>
 
 &nbsp;
