@@ -114,6 +114,16 @@ tailwindCSSをjsxのclassNameに記述することで簡単にスタイルを割
 
 その他にも、再利用が可能なコンテンツは積極的にコンポーネントを使用しました。
 
+## 画面設計
+
+[figma](https://www.figma.com/design/CdWw4l7CoAvCUsMH4EWY68/Untitled?node-id=1-2&t=P0GFBlxEuTEB7hGN-1)
+
+## コンポーネント設計
+
+## 詳細設計
+
+## テスト設計
+
 ## 今後の展望
 
 このプロジェクトでは、クライアント依存のデータ共有を行っていますが、Supabaseなどのデータベースを使用して、認証機能やユーザー別の情報を保持したアプリケーションの実装も行っていきたいです。
