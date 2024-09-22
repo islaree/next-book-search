@@ -9,7 +9,7 @@ import { bookItems } from '@/types/book'
 
 export const BookItem = ({ book }: { book: bookItems }) => {
   return (
-    <Link href={`search/${book.id}`} className="block h-full hover:bg-gray-50">
+    <Link href={`/search/${book.id}`} className="block h-full hover:bg-gray-50">
       <div className="flex gap-x-4 px-6 py-4">
         <div className="w-20 shrink-0">
           <BookThumbnail src={book.volumeInfo.imageLinks?.thumbnail} alt={book.volumeInfo.title} />
