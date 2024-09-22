@@ -1,6 +1,6 @@
 'use client'
 
-import { useLibraryStore } from '@/store/library-store'
+import { useLibraryStore } from '@/store/library'
 import { BookItem } from './book-item'
 
 export const LibraryList = () => {
