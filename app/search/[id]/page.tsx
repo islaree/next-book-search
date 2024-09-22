@@ -1,14 +1,16 @@
-import Book from '@/components/search/book'
+import Link from 'next/link'
 import { Suspense } from 'react'
-import Loading from '@/components/search/loading-book'
+import { BookDetail } from '@/components/book-detail'
 
-export default function Library({ params }: { params: { id: string } }) {
+export default async function Library({ params }: { params: { id: string } }) {
   return (
     <div className="mx-auto w-full max-w-[1200px]">
-      <Suspense fallback={<Loading />}>
-        <Book id={params.id} />
+      <div className="mx-6">
+        <Link href="/search">← 戻る</Link>
+      </div>
+      <Suspense fallback={<p>loading...</p>}>
+        <BookDetail id={params.id} />
       </Suspense>
-      <div></div>
     </div>
   )
 }
