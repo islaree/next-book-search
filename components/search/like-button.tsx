@@ -4,29 +4,23 @@ import { useDataContext } from '../context'
 import { IconContext } from 'react-icons'
 import { PiHeartBold } from 'react-icons/pi'
 import { AiFillHeart } from 'react-icons/ai'
+import { useLibraryStore } from '@/store/library'
+import { bookItems } from '@/types/book'
 
-interface LikeButtonProps {
-  id: string
-  title: string
-  thumbnail: string | null
-  authors: string[] | null
-  publisher: string | null
-}
-
-export default function LikeButton({ book }: { book: LikeButtonProps }) {
-  const { data, setData } = useDataContext()
+export default function LikeButton({ book }: { book: bookItems }) {
+  const { library, addLibrary, removeLibrary } = useLibraryStore()
 
   const handleAddClick = () => {
-    setData([...data, book])
+    addLibrary(book)
   }
 
   const handleRemoveClick = () => {
-    setData(data.filter((data: LikeButtonProps) => data.id !== book.id))
+    removeLibrary(book.id)
   }
 
   return (
     <>
-      {data.indexOf(book) == -1 ? (
+      {library.indexOf(book) == -1 ? (
         <button onClick={handleAddClick} className="flex items-center gap-x-1">
           <IconContext.Provider value={{ color: '#83888c', size: '20px' }}>
             <PiHeartBold />
